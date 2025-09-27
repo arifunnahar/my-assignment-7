@@ -37,7 +37,5 @@ State Management Libraries: For large, complex applications, use libraries like 
 
 
 
-### How is event handling done in React?
 
-In React, event handling is done by passing a function as a prop to a JSX element. Unlike standard HTML, event names use camelCase, and you pass a function reference instead of a string. React's SyntheticEvent system provides a cross-browser consistent wrapper around native browser events, ensuring predictable behavior. You can define event handlers as named functions within the component or use inline arrow functions for simpler tasks. To pass arguments to a handler, you wrap the function call in an inline arrow function. You can also prevent default browser behavior, like a form submission, by calling event.preventDefault().
-AI responses may include mist.
+
