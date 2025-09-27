@@ -40,10 +40,10 @@ const Aside = ({ resolved, setResolved, setIsComplete, setTickets,
             <p className="text-gray-500 p-2 text-sm">Select a ticket to add to Task Status</p>
           ) : (
             resolved.map((ele) => (
-              <div key={ele.id} className="bg-white p-3 mb-2 rounded shadow">
+              <div key={ele.id} className="bg-white p-3 mb-2shadow rounded-lg">
                 <h3 className="font-semibold text-gray-800">{ele.title}</h3>
                 <button
-                  className="btn bg-green-600 w-full text-white mt-2 px-2 py-1"
+                  className="btn bg-green-600 w-full text-white mt-2 px-2 py-1 rounded-lg"
                   onClick={() => handelComplete(ele.id)}
                 >
                   Complete
@@ -57,21 +57,25 @@ const Aside = ({ resolved, setResolved, setIsComplete, setTickets,
         <div className="mt-10 mb-2">
           <h1 className="font-semibold text-gray-800 text-xl mb-2 ml-2"> Resolved Task</h1>
           
-          <div className=" p-2 mb-2">
+          <div className=" p-2 mb-2 ">
           
            {remove.length === 0 ? (
             <p className="text-gray-500 text-sm p-2">No resolved task yet</p>
           ) : (
             remove.map((ele) => (
-              <div key={ele.id} className="bg-white p-3 mb-2 rounded shadow">
+              <div key={ele.id} className="bg-white p-3 mb-2 shadow rounded-lg">
                 <h3 className="text-gray-700 font-semibold">{ele.title}</h3>
+
+                <div className="flex justify-between items-center  ">
+                  <h3 className="text-green-800 font-semibold mt-3 text-lg px-12 py-1 rounded-lg bg-gray-100">Completed</h3>
                 
                 <button
-                  className=" px-2 py-1 w-full mt-2"
+                  className="text-red-500 nt-3"
                   onClick={() => handelDelete(ele.id)}
                 >
-                  Completed <span>   </span>
+                  Delete 
                 </button>
+                </div>
             
               </div>
             ))
