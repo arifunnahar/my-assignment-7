@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
+
+
+
 const Aside = ({ resolved, setResolved, setIsComplete, setTickets,
   tickets,
  
@@ -13,7 +16,8 @@ const Aside = ({ resolved, setResolved, setIsComplete, setTickets,
     seRemove((prev) => [...prev, finded]);
     setResolved(newResolved);
     setTickets(newTickets);
-    toast.success('Task Completed')
+
+    toast.success('Completed')
 
     setIsComplete((prev) => [...prev, newResolved]);
 };
@@ -61,12 +65,14 @@ const Aside = ({ resolved, setResolved, setIsComplete, setTickets,
             remove.map((ele) => (
               <div key={ele.id} className="bg-white p-3 mb-2 rounded shadow">
                 <h3 className="text-gray-700 font-semibold">{ele.title}</h3>
+                
                 <button
-                  className="bg-blue-200 px-2 py-1 w-full mt-2"
+                  className=" px-2 py-1 w-full mt-2"
                   onClick={() => handelDelete(ele.id)}
                 >
-                  Completed
+                  Completed <span>   </span>
                 </button>
+            
               </div>
             ))
           )}

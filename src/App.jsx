@@ -11,11 +11,11 @@ const App = () => {
     <>
        
       <Navbar></Navbar>
-      
-      <div className="">
+
+     
     
       <IssueManagement/>
-    </div>
+ 
       <Footer></Footer>
       
     <ToastContainer/>
